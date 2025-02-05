@@ -1,0 +1,6 @@
+	Orange	Blue
+	4
+	TRIANG	1	367	396	275	216	114	245	Yellow	Red
+	CIRCLE	2	801	560	794	349	Orange	Blue
+	HEX	5	571	139	Orange	Green
+	SQUARE	6	1007	195	Orange	Blue

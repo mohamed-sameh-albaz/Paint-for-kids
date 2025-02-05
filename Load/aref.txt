@@ -1,0 +1,4 @@
+	 Orange 	 Green 
+	2
+	TRIANG	1	367	396	275	216	114	245	 Yellow 	Red
+	CIRCLE	2	801	560	794	349	 Orange 	 Blue 

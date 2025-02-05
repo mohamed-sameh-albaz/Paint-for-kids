@@ -1,0 +1,4 @@
+	Orange	Yellow
+	2
+	CIRCLE	1	315	275	242	204	Blue	NO_FILL
+	HEX	2	677	264	Red	Blue

@@ -1,0 +1,7 @@
+	Black	NO_FILL
+	5
+	CIRCLE	1	405	277	485	194	Black	Black
+	RECT	2	91	235	45	311	Blue	Orange
+	HEX	3	670	200	Yellow	Green
+	CIRCLE	4	1075	395	1033	270	Red	Yellow
+	HEX	5	198	202	Red	Yellow

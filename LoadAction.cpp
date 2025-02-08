@@ -29,23 +29,25 @@ void LoadAction::ReadActionParameters()
 }
 
 void LoadAction::Execute()
-{
-	char toCheck ='Y';
-	string Check;
+{/*
+	char toCheck ='Y';*/
+	//string Check;
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
 	
 	if (pManager->GetFigCount())
 	{
 		pIn->QuesKeyClicked();
-		pOut->PrintMessage(" there are drawn figures if you load file all your progress will be lost if you want to continue press Y otherwise press any key "); 
-		Check=pIn->GetString(pOut);
-		pIn->QuesPointClicked();
-		toCheck = Check[0];
+		pOut->PrintMessage("Do Clear All first");
+		//pOut->PrintMessage(" there are drawn figures if you load file all your progress will be lost if you want to continue press Y otherwise press any key "); 
+		/*Check=pIn->GetString(pOut);*/
+	/*	pIn->QuesPointClicked();*/
+	/*	toCheck = Check[0];*/
 	}
 	
-	
-		if (toupper(toCheck) == 'Y')  //optional space exit enter etc should i be aware of them
+	else
+
+		/*if (toupper(toCheck) == 'Y')*/  //optional space exit enter etc should i be aware of them
 		{
 			pManager->ClearAll();
 			////call action clearall(clear drawing area and clear figcount and clear figlist )

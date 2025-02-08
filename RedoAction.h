@@ -3,11 +3,11 @@
 #include"Figures/CFigure.h"
 #include "ApplicationManager.h"
 
-class RedoAction :
+class Redoaction :
     public Action
 {private:
 public:
-    RedoAction(ApplicationManager* pApp);
+    Redoaction(ApplicationManager* pApp);
     virtual void ReadActionParameters();
     virtual void Execute();
     virtual void Record();

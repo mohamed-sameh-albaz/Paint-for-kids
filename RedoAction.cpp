@@ -1,14 +1,14 @@
 #include "RedoAction.h"
 #include<fstream>
-RedoAction::RedoAction(ApplicationManager* pApp):Action(pApp)
+Redoaction::Redoaction(ApplicationManager* pApp):Action(pApp)
 {
 }
 
-void RedoAction::ReadActionParameters()
+void Redoaction::ReadActionParameters()
 {
 }
 
-void RedoAction::Execute()
+void Redoaction::Execute()
 {
 	Output* pOut = pManager->GetOutput();
 	pOut->ClearStatusBar();
@@ -27,7 +27,7 @@ void RedoAction::Execute()
 		Record();
 }
 
-void RedoAction::Record()
+void Redoaction::Record()
 {
 	operationCount++;
 	fstream Rec(recordFile, ios::app);
@@ -37,7 +37,7 @@ void RedoAction::Record()
 	
 }
 
-void RedoAction::Play(fstream& Play)
+void Redoaction::Play(fstream& Play)
 {
 	Execute();
 

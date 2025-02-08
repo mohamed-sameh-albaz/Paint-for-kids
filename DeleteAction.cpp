@@ -43,14 +43,10 @@ void DeleteAction::UndoAction()
 
 void DeleteAction::RedoAction()
 {
-	Output* pOut = pManager->GetOutput();
-
 	if (SelectedFig != NULL)
 	{
 		pManager->DeleteSelectedFig(SelectedFig);
 	}
-	
-	
 }
 
 void DeleteAction::Record()

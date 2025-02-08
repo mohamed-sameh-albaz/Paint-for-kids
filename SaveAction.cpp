@@ -35,15 +35,11 @@ void SaveAction::Execute()
 		ReadActionParameters();
 
 		// To make sure that file has the right extention
-	/*	int index = fileName.rfind(".");
-		if (index)
-			fileName.replace(index, 4, ".txt");
-		else*/
 		fileName += ".txt";
 
 
 
-		fstream saveFile(fileName,ios::out);    // I didn't check if the file is open or not because i check it in previous
+		fstream saveFile(fileName,ios::out);  
 
 
 		if (!saveFile.is_open()) // optional because  I checked if the file name is correct or not in previous step

@@ -24,6 +24,8 @@ void StrtRecAction::Execute()
 		}
 		else
 		{
+	if (!pManager->isMuted())
+		PlaySound("sounds/rec_effect", NULL, SND_ASYNC);
 			pManager->ClearAll();  
 			fstream Rec(recordFile, ios::out);
 			pOut->PrintMessage(" start Recording ..( maximum 20 operations) ");
@@ -38,6 +40,4 @@ void StrtRecAction::Execute()
 		}
 	}
 	
-	if (!pManager->isMuted())
-		PlaySound("sounds/rec_effect", NULL, SND_ASYNC);
 }

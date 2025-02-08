@@ -49,7 +49,6 @@ void AddFillAction::Execute()
 		pManager->AddActToUndoRedo(this);
 		pManager->setWillBeDeleted(true);
 		pManager->ResetRedoCnt();
-		pOut->ClearDrawArea();
 	}
 	if (pManager->GetIsRecording() && operationCount < MaxRecOperaion)
 		Record();

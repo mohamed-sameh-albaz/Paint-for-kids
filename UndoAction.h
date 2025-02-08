@@ -2,13 +2,13 @@
 #include "Actions/Action.h"
 #include"Figures/CFigure.h"
 #include "ApplicationManager.h"
-class UndoAction : public Action
+class Undoaction : public Action
 {
 private:
     Action* pAct;
 
 public:
-    UndoAction(ApplicationManager* pApp);
+    Undoaction(ApplicationManager* pApp);
 
     virtual void ReadActionParameters();
 

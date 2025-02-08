@@ -6,8 +6,8 @@ PlyModBoth::PlyModBoth(ApplicationManager* pApp) :Action(pApp)
 	Num_Shapes = 0;
 	for (int i = 0; i < 5; i++)
 	{
-		for(int j = 0 ; j <7;j++)
-		Shapes[i][j] = 0;
+		for (int j = 0; j < 7; j++)
+			Shapes[i][j] = 0;
 	}
 	FirstGame = true;
 }
@@ -46,11 +46,11 @@ void PlyModBoth::ReadActionParameters()
 					Shapes[j][6]++;
 				}
 
-	}
+			}
 	for (int i = 0; i < 5; i++)
-		for(int j = 0 ; j<7 ; j++)
-		if (Shapes[i][j] != 0)
-			Num_Shapes++;
+		for (int j = 0; j < 7; j++)
+			if (Shapes[i][j] != 0)
+				Num_Shapes++;
 }
 void PlyModBoth::Execute()
 {

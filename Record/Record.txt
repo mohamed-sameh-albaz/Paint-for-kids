@@ -1,17 +1,1 @@
-	Blue	NO_FILL	0	0	0
-	popUpAction	1	1	RECT	1	86	70	612	293	Blue	NO_FILL
-	Select	207	153
-	Move	374	335
-	popUpAction	1	4	HEX	2	344	161	Blue	NO_FILL
-	Select	374	133
-	popUpAction	10	3
-	Select	319	126
-	popUpAction	11	6
-	Select	335	142
-	Move	407	422
-	Undo
-	Redo
-	Redo
-	Select	205	249
-	Move	444	155
-	Move	413	188
+EmptyRecord

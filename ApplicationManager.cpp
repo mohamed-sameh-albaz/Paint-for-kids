@@ -200,10 +200,10 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new AddFillAction(this);
 			break;
 		case UNDO:
-			pAct = new UndoAction(this);
+			pAct = new Undoaction(this);
 			break;
 		case REDO:
-			pAct = new RedoAction(this);
+			pAct = new Redoaction(this);
 			break;
 		case DEL:
 			pAct = new DeleteAction(this);
@@ -216,6 +216,7 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			break;
 		case RESIZE:
 			pAct = new ResizeAction(this);
+			break;
 		case DRAG:
 			pAct = new DragAction(this);
 			break;
@@ -447,6 +448,7 @@ void ApplicationManager::ClearAll()
 		}
 	}
 	FigCount = 0;
+	pOut->ClearDrawArea();
 }
 
 void ApplicationManager::ClearUndoRedoList()

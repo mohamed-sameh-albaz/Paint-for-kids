@@ -59,7 +59,6 @@ void AddColorAction::UndoAction()
 void AddColorAction::RedoAction()
 {
 	SelectedShape->ChngDrawClr(currentDrawClr);
-	preDrawClr = currentDrawClr;
 	UI.DrawColor = currentDrawClr;
 }
 

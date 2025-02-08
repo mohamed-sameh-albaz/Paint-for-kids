@@ -50,7 +50,6 @@ void AddRectAction::Execute()
 	pManager->ResetRedoCnt();
 	if (pManager->GetIsRecording() && operationCount < MaxRecOperaion)
 		Record();
-	pManager->AddFigure(Rect);
 }
 
 void AddRectAction::UndoAction()

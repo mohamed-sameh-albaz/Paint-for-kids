@@ -5,7 +5,7 @@ Output::Output() :lengthHex(100), lengthSq(200)  // Initialize length of hexagon
 	//Initialize user interface parameters
 	UI.InterfaceMode = MODE_DRAW;
 
-	UI.width = 1000;
+	UI.width = 1500;
 	UI.height = 750;
 	UI.wx = 5;
 	UI.wy = 5;

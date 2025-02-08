@@ -42,8 +42,6 @@ void AddSqrAction::Execute()
 	pManager->ResetRedoCnt();
 	if (pManager->GetIsRecording() && operationCount < MaxRecOperaion)
 		Record();
-	//Add the square to the list of figures
-	pManager->AddFigure(Square);
 }
 
 void AddSqrAction::UndoAction()

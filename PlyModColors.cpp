@@ -37,7 +37,7 @@ void PlyModColors::Execute()
 {
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
-		ReadActionParameters();
+	ReadActionParameters();
 	if (Num_Colors)
 	{
 		string Color;
@@ -101,36 +101,36 @@ void PlyModColors::Execute()
 					pOut->PrintMessage("Wrong!! Choose the " + Color);
 				}
 			}
-				else if (P.y < UI.ToolBarHeight && (P.x > (UI.MenuItemWidth * ITM_TYP_COLOR) && P.x < (UI.MenuItemWidth * ITM_TYP_SHAPE)))
-				{
+			else if (P.y < UI.ToolBarHeight && (P.x > (UI.MenuItemWidth * ITM_TYP_COLOR) && P.x < (UI.MenuItemWidth * ITM_TYP_SHAPE)))
+			{
 				Correct = 0;
 				Wrong = 0;
 				Num_Colors = 0;
 				FirstGame = false;
-			for (int i = 0; i < 7; i++)
+				for (int i = 0; i < 7; i++)
 				{
 					Colors[i] = 0;
 				}
-					for (int i = 0; i < pManager->ReturnFigCount(); i++)
-					{
-						(pManager->ReturnFigure(i))->Show();
-					}
-					pManager->UpdateInterface();
-					Execute();
-					return;
+				for (int i = 0; i < pManager->ReturnFigCount(); i++)
+				{
+					(pManager->ReturnFigure(i))->Show();
 				}
+				pManager->UpdateInterface();
+				Execute();
+				return;
 			}
-			if (Correct)
-			{
-				pOut->PrintMessage("Correct Colors Selected : " + to_string(Correct) + " Incorrect Colors Selected : " + to_string(Wrong));
+		}
+		if (Correct)
+		{
+			pOut->PrintMessage("Correct Colors Selected : " + to_string(Correct) + " Incorrect Colors Selected : " + to_string(Wrong));
 
-				pIn->GetPointClicked(P.x, P.y);
-			}
-			for (int i = 0; i < pManager->ReturnFigCount(); i++)
-			{
-				(pManager->ReturnFigure(i))->Show();
-			}
-				pOut->PrintMessage("Play Mode");
-			pManager->UpdateInterface();
+			pIn->GetPointClicked(P.x, P.y);
+		}
+		for (int i = 0; i < pManager->ReturnFigCount(); i++)
+		{
+			(pManager->ReturnFigure(i))->Show();
+		}
+		pOut->PrintMessage("Play Mode");
+		pManager->UpdateInterface();
 	}
 }

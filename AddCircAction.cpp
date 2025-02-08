@@ -45,8 +45,6 @@ void AddCircAction::Execute()
 	pManager->AddActToUndoRedo(this);
 	pManager->setWillBeDeleted(true);
 	pManager->ResetRedoCnt();
-	//Add the rectangle to the list of figures
-	pManager->AddFigure(Circ);
 
 	if (pManager->GetIsRecording() && operationCount < MaxRecOperaion)
 		Record();

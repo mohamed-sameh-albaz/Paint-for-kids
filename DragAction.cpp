@@ -26,6 +26,7 @@ void DragAction::Execute()
 		case BUTTON_DOWN:
 			CFigure* SelectedShape = pManager->GetLastSelected();
 			CFigure* test = pManager->GetLastSelected();
+			if(test)
 			if (pIn->mouseHeld(P.x, P.y) &&pManager->GetFigCount()) {
 				if (SelectedShape->getMovingValidity(P))
 					SelectedShape->move(P);

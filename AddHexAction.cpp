@@ -39,7 +39,6 @@ void AddHexAction::Execute()
 	pManager->ResetRedoCnt();
 	 if (pManager->GetIsRecording() && operationCount < MaxRecOperaion)
 		 Record();
-	pManager->AddFigure(Hexa);
 
 }
 

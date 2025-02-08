@@ -1,14 +1,14 @@
 #include "UndoAction.h"
 #include<fstream>
-UndoAction::UndoAction(ApplicationManager* pApp):Action(pApp)
+Undoaction::Undoaction(ApplicationManager* pApp):Action(pApp)
 {
 }
 
-void UndoAction::ReadActionParameters()
+void Undoaction::ReadActionParameters()
 {
 }
 
-void UndoAction::Execute()
+void Undoaction::Execute()
 {
 	Output* pOut = pManager->GetOutput();
 	pOut->ClearStatusBar();
@@ -28,7 +28,7 @@ void UndoAction::Execute()
 		Record();
 }
 
-void UndoAction::Record()
+void Undoaction::Record()
 {	
 	operationCount++;
 	fstream Rec(recordFile, ios::app);
@@ -38,7 +38,7 @@ void UndoAction::Record()
 	
 }
 
-void UndoAction::Play(fstream& Play)
+void Undoaction::Play(fstream& Play)
 {
 
 	Execute();

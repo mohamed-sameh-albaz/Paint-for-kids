@@ -1,4 +1,5 @@
 #include "PlyModShapes.h"
+#include <Windows.h>
 PlyModShapes::PlyModShapes(ApplicationManager* pApp) :Action(pApp)
 {
 	Correct = 0;
@@ -36,18 +37,15 @@ void PlyModShapes::Execute()
 		{
 			Random = rand() % pManager->ReturnFigCount();
 			for (int i = 0; i < 5; i++)
-			{
 				if (((pManager->ReturnFigure(Random))->GetShapeType() == shapes[i]))
-				{
 					Num_Figures = Figures[i];
-				}
-			}
 			pOut->PrintMessage("Select all " + (pManager->ReturnFigure(Random))->GetShapeType());
 			while (Num_Figures)
 			{
 				pIn->GetPointClicked(P.x, P.y);
 				if ((pManager->GetFigure(P.x, P.y)))
 				{
+
 					if ((pManager->GetFigure(P.x, P.y))->GetShapeType() == (pManager->ReturnFigure(Random))->GetShapeType())
 					{
 						pOut->ClearDrawArea();
